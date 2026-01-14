@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Zed\GuiTable\Configuration\Builder;
+namespace SprykerTest\Shared\GuiTable\Configuration\Builder;
 
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\GuiTableColumnConfigurationTransfer;
@@ -17,7 +17,7 @@ use TypeError;
  * Auto-generated group annotations
  *
  * @group SprykerTest
- * @group Zed
+ * @group Shared
  * @group GuiTable
  * @group Configuration
  * @group Builder

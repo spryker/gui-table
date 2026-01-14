@@ -13,8 +13,10 @@ use Generated\Shared\Transfer\GuiTableColumnConfigurationTransfer;
 use Generated\Shared\Transfer\GuiTableConfigurationTransfer;
 use Generated\Shared\Transfer\GuiTableDataResponseTransfer;
 use Generated\Shared\Transfer\GuiTableRowDataResponseTransfer;
+use Spryker\Service\Container\Container;
 use Spryker\Shared\GuiTable\Configuration\GuiTableConfigInterface;
 use Spryker\Shared\GuiTable\Http\DataResponse\DataResponseFormatter;
+use Spryker\Shared\Kernel\Container\GlobalContainer;
 use SprykerTest\Shared\GuiTable\GuiTableSharedTester;
 
 /**
@@ -99,6 +101,12 @@ class DataResponseFormatterTest extends Unit
      * @var \SprykerTest\Shared\GuiTable\GuiTableSharedTester
      */
     protected GuiTableSharedTester $tester;
+
+    protected function _before(): void
+    {
+        $globalContainer = new GlobalContainer();
+        $globalContainer->setContainer(new Container(['SERVICE_TIMEZONE' => 'Europe/Berlin']));
+    }
 
     /**
      * @return void
