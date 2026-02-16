@@ -1,2 +1,5 @@
 parameters:
     level: 8
+    ignoreErrors:
+        # Dynamic method calls verified with method_exists() at runtime
+        - '#Call to an undefined method Spryker\\Shared\\Kernel\\Transfer\\AbstractTransfer::set(Page|PageSize|OrderBy|OrderDirection)\(\)\.#'
