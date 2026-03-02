@@ -42,11 +42,6 @@ class GuiTableConfigurationFunctionProvider extends TwigFunctionProvider
      */
     protected ConfigurationTranslatorInterface $configurationTranslator;
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Dependency\Service\GuiTableToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Shared\GuiTable\Configuration\Expander\ConfigurationDefaultValuesExpanderInterface $configurationDefaultValuesExpander
-     * @param \Spryker\Shared\GuiTable\Configuration\Translator\ConfigurationTranslatorInterface $configurationTranslator
-     */
     public function __construct(
         GuiTableToUtilEncodingServiceInterface $utilEncodingService,
         ConfigurationDefaultValuesExpanderInterface $configurationDefaultValuesExpander,
@@ -57,17 +52,11 @@ class GuiTableConfigurationFunctionProvider extends TwigFunctionProvider
         $this->configurationTranslator = $configurationTranslator;
     }
 
-    /**
-     * @return string
-     */
     public function getFunctionName(): string
     {
         return 'guiTableConfiguration';
     }
 
-    /**
-     * @return callable
-     */
     public function getFunction(): callable
     {
         return function (GuiTableConfigurationTransfer $guiTableConfigurationTransfer, bool $jsonEncode = true, array $overwrite = []) {

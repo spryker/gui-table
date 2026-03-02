@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\GuiTableConfigurationTransfer;
 
 interface ConfigurationTranslatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     public function translateConfiguration(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer;

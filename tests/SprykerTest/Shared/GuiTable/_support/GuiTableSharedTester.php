@@ -35,25 +35,16 @@ class GuiTableSharedTester extends Actor
 {
     use _generated\GuiTableSharedTesterActions;
 
-    /**
-     * @return \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface
-     */
     public function createGuiTableConfigurationBuilder(): GuiTableConfigurationBuilderInterface
     {
         return new GuiTableConfigurationBuilder();
     }
 
-    /**
-     * @return \Spryker\Shared\GuiTable\Normalizer\DateRangeRequestFilterValueNormalizerInterface
-     */
     public function createDateRangeRequestFilterValueNormalizer(): DateRangeRequestFilterValueNormalizerInterface
     {
         return new DateRangeRequestFilterValueNormalizer();
     }
 
-    /**
-     * @return \Spryker\Shared\GuiTable\Dependency\Service\GuiTableToUtilDateTimeServiceInterface
-     */
     public function createGuiTableToUtilDateTimeServiceBridge(): GuiTableToUtilDateTimeServiceInterface
     {
         return new GuiTableToUtilDateTimeServiceBridge($this->getLocator()->utilDateTime()->service());

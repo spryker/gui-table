@@ -14,25 +14,10 @@ use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
 
 abstract class AbstractGuiTableDataProvider implements GuiTableDataProviderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     *
-     * @return \Spryker\Shared\Kernel\Transfer\AbstractTransfer
-     */
     abstract protected function createCriteria(GuiTableDataRequestTransfer $guiTableDataRequestTransfer): AbstractTransfer;
 
-    /**
-     * @param \Spryker\Shared\Kernel\Transfer\AbstractTransfer $criteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     abstract protected function fetchData(AbstractTransfer $criteriaTransfer): GuiTableDataResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     public function getData(GuiTableDataRequestTransfer $guiTableDataRequestTransfer): GuiTableDataResponseTransfer
     {
         $criteriaTransfer = $this->createCriteria($guiTableDataRequestTransfer);
@@ -119,12 +104,6 @@ abstract class AbstractGuiTableDataProvider implements GuiTableDataProviderInter
         return $criteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     * @param \Spryker\Shared\Kernel\Transfer\AbstractTransfer $criteriaTransfer
-     *
-     * @return \Spryker\Shared\Kernel\Transfer\AbstractTransfer
-     */
     protected function mapSearchTermToCriteria(
         GuiTableDataRequestTransfer $guiTableDataRequestTransfer,
         AbstractTransfer $criteriaTransfer

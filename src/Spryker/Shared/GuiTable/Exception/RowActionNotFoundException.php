@@ -16,9 +16,6 @@ class RowActionNotFoundException extends Exception
      */
     protected const MESSAGE_TEMPLATE = 'Failed to find row action by id: %s.';
 
-    /**
-     * @param string $id
-     */
     public function __construct(string $id)
     {
         parent::__construct(sprintf(static::MESSAGE_TEMPLATE, $id));

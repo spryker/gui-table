@@ -17,11 +17,6 @@ use Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderIn
 
 abstract class AbstractConfigurationTranslator implements ConfigurationTranslatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     public function translateConfiguration(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -38,11 +33,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateColumns(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -56,11 +46,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableColumnConfigurationTransfer $guiTableColumnConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableColumnConfigurationTransfer
-     */
     protected function translateColumn(
         GuiTableColumnConfigurationTransfer $guiTableColumnConfigurationTransfer
     ): GuiTableColumnConfigurationTransfer {
@@ -73,11 +58,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableColumnConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateFilters(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -98,11 +78,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableFilterTransfer $guiTableFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableFilterTransfer
-     */
     protected function translateFilter(GuiTableFilterTransfer $guiTableFilterTransfer): GuiTableFilterTransfer
     {
         $filterTitle = $guiTableFilterTransfer->getTitle();
@@ -123,11 +98,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableFilterTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateRowActions(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -148,11 +118,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableRowActionTransfer $guiTableRowActionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableRowActionTransfer
-     */
     protected function translateRowAction(GuiTableRowActionTransfer $guiTableRowActionTransfer): GuiTableRowActionTransfer
     {
         $rowActionTitle = $guiTableRowActionTransfer->getTitle();
@@ -164,11 +129,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableRowActionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateBatchActions(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -189,11 +149,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableBatchActionTransfer $guiTableBatchActionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableBatchActionTransfer
-     */
     protected function translateBatchAction(GuiTableBatchActionTransfer $guiTableBatchActionTransfer): GuiTableBatchActionTransfer
     {
         $batchActionTitle = $guiTableBatchActionTransfer->getTitle();
@@ -205,11 +160,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableBatchActionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateSearch(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -231,11 +181,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateTitle(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -257,11 +202,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateEditableCreateConfiguration(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -310,11 +250,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer->setEditable($guiTableEditableConfigurationTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateEditableUpdateConfiguration(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -363,11 +298,6 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer->setEditable($guiTableEditableConfigurationTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function translateEditableColumns(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -393,10 +323,5 @@ abstract class AbstractConfigurationTranslator implements ConfigurationTranslato
         return $guiTableConfigurationTransfer->setEditable($guiTableEditableConfigurationTransfer);
     }
 
-    /**
-     * @param string $key
-     *
-     * @return string
-     */
     abstract protected function translate(string $key): string;
 }

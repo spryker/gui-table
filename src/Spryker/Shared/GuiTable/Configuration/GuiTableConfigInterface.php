@@ -9,9 +9,6 @@ namespace Spryker\Shared\GuiTable\Configuration;
 
 interface GuiTableConfigInterface
 {
-    /**
-     * @return string
-     */
     public function getDefaultDataSourceType(): string;
 
     /**
@@ -24,18 +21,9 @@ interface GuiTableConfigInterface
      */
     public function getDefaultAvailablePageSizes(): array;
 
-    /**
-     * @return int
-     */
     public function getDefaultPageSize(): int;
 
-    /**
-     * @return string
-     */
     public function getDefaultSearchPlaceholder(): string;
 
-    /**
-     * @return string|null
-     */
     public function getDefaultTimezone(): ?string;
 }

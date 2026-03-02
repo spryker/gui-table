@@ -30,9 +30,6 @@ class GuiTableConfigurationTwigPlugin extends AbstractTwigExtensionPlugin
         ];
     }
 
-    /**
-     * @return \Twig\TwigFunction
-     */
     protected function createFunction(): TwigFunction
     {
         $functionProvider = $this->getFactory()->createGuiTableConfigurationFunctionProvider();

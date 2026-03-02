@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\GuiTableConfigurationTransfer;
 
 interface ConfigurationDefaultValuesExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     public function setDefaultValues(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer;

@@ -86,9 +86,6 @@ class DataRequestBuilderTest extends Unit
      */
     protected GuiTableSharedTester $tester;
 
-    /**
-     * @return void
-     */
     public function testBuildGuiTableDataRequestFromRequestReturnsCorrectGuiTableDataRequestTransfer(): void
     {
         // Arrange
@@ -124,9 +121,6 @@ class DataRequestBuilderTest extends Unit
         $this->assertSame(static::TEST_PARAM_FILTERS, $guiTableDataRequestTransfer->getFilters());
     }
 
-    /**
-     * @return void
-     */
     public function testBuildGuiTableDataRequestFromRequestReturnsGuiTableDataRequestTransferWithDefaultValues(): void
     {
         // Arrange
@@ -144,9 +138,6 @@ class DataRequestBuilderTest extends Unit
         $this->assertSame(static::TEST_CONFIG_DEFAULT_PAGE_SIZE, $guiTableDataRequestTransfer->getPageSize());
     }
 
-    /**
-     * @return \Spryker\Shared\GuiTable\Http\DataRequest\DataRequestBuilderInterface
-     */
     protected function createDataRequestBuilder(): DataRequestBuilderInterface
     {
         return new DataRequestBuilder(

@@ -31,10 +31,6 @@ class DataResponseFormatter implements DataResponseFormatterInterface
      */
     protected GuiTableConfigInterface $guiTableConfig;
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Dependency\Service\GuiTableToUtilDateTimeServiceInterface $utilDateTimeService
-     * @param \Spryker\Shared\GuiTable\Configuration\GuiTableConfigInterface $guiTableConfig
-     */
     public function __construct(GuiTableToUtilDateTimeServiceInterface $utilDateTimeService, GuiTableConfigInterface $guiTableConfig)
     {
         $this->utilDateTimeService = $utilDateTimeService;

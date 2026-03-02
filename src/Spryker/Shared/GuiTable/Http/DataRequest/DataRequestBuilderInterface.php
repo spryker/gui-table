@@ -13,12 +13,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 interface DataRequestBuilderInterface
 {
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataRequestTransfer
-     */
     public function buildGuiTableDataRequestFromRequest(
         Request $request,
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer

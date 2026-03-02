@@ -53,9 +53,6 @@ class GuiTableConfigurationBuilderTest extends Unit
      */
     protected const COLUMN_TYPE_IMAGE = 'image';
 
-    /**
-     * @return void
-     */
     public function testAddColumnImageAddsImageColumn(): void
     {
         // Arrange
@@ -68,9 +65,6 @@ class GuiTableConfigurationBuilderTest extends Unit
         $this->assertArrayHasKey(static::TITLE_IMAGE_COLUMN, $guiTableConfigurationBuilder->getColumns());
     }
 
-    /**
-     * @return void
-     */
     public function testAddColumnImageCreatesInstanceOfTableColumnConfigurationTransfer(): void
     {
         // Arrange
@@ -84,9 +78,6 @@ class GuiTableConfigurationBuilderTest extends Unit
         $this->assertTrue($guiTableColumnConfigurationTransfer instanceof GuiTableColumnConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testAddColumnImageAddsImageWithCorrectAttributesWithoutAltAttribute(): void
     {
         // Arrange
@@ -100,9 +91,6 @@ class GuiTableConfigurationBuilderTest extends Unit
         $this->assertColumnAttributesMatchExpected($guiTableColumnConfigurationTransfer, static::TITLE_IMAGE_COLUMN, false, false, static::COLUMN_TYPE_IMAGE, []);
     }
 
-     /**
-      * @return void
-      */
     public function testAddColumnImageAddsCorrectAttributesWithAltSource(): void
     {
         // Arrange
@@ -117,9 +105,6 @@ class GuiTableConfigurationBuilderTest extends Unit
         $this->assertColumnAttributesMatchExpected($guiTableColumnConfigurationTransfer, static::TITLE_IMAGE_COLUMN, false, false, static::COLUMN_TYPE_IMAGE, $expectedTypeOptions);
     }
 
-    /**
-     * @return void
-     */
     public function testAddColumnImageWithWrongTypeOfAltSourceThrowsException(): void
     {
         // Arrange
@@ -132,9 +117,6 @@ class GuiTableConfigurationBuilderTest extends Unit
         $guiTableConfigurationBuilder->addColumnImage(static::ID_IMAGE_COLUMN, static::TITLE_IMAGE_COLUMN, false, false, []);
     }
 
-    /**
-     * @return void
-     */
     public function testAddColumnImageWithDuplicatingColumnNameThrowsException(): void
     {
         // Arrange
@@ -149,12 +131,6 @@ class GuiTableConfigurationBuilderTest extends Unit
         $guiTableConfigurationBuilder->addColumnImage(static::ID_IMAGE_COLUMN, static::TITLE_IMAGE_COLUMN, false, false, null);
     }
 
-    /**
-     * @param string $idColumn
-     * @param \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder
-     *
-     * @return \Generated\Shared\Transfer\GuiTableColumnConfigurationTransfer
-     */
     protected function extractAddedColumn(
         string $idColumn,
         GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder

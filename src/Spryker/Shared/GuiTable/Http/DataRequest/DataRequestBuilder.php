@@ -37,11 +37,6 @@ class DataRequestBuilder implements DataRequestBuilderInterface
      */
     protected DateRangeRequestFilterValueNormalizerInterface $dateRangeRequestFilterValueNormalizer;
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Dependency\Service\GuiTableToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Shared\GuiTable\Configuration\GuiTableConfigInterface $guiTableConfig
-     * @param \Spryker\Shared\GuiTable\Normalizer\DateRangeRequestFilterValueNormalizerInterface $dateRangeRequestFilterValueNormalizer
-     */
     public function __construct(
         GuiTableToUtilEncodingServiceInterface $utilEncodingService,
         GuiTableConfigInterface $guiTableConfig,
@@ -52,12 +47,6 @@ class DataRequestBuilder implements DataRequestBuilderInterface
         $this->dateRangeRequestFilterValueNormalizer = $dateRangeRequestFilterValueNormalizer;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataRequestTransfer
-     */
     public function buildGuiTableDataRequestFromRequest(
         Request $request,
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
@@ -72,13 +61,6 @@ class DataRequestBuilder implements DataRequestBuilderInterface
         return $guiTableDataRequestTransfer;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataRequestTransfer
-     */
     protected function addFiltersToDataRequest(
         Request $request,
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer,
@@ -109,12 +91,6 @@ class DataRequestBuilder implements DataRequestBuilderInterface
         return $guiTableDataRequestTransfer;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataRequestTransfer
-     */
     protected function addOrderToDataRequest(
         Request $request,
         GuiTableDataRequestTransfer $guiTableDataRequestTransfer
@@ -127,13 +103,6 @@ class DataRequestBuilder implements DataRequestBuilderInterface
         return $guiTableDataRequestTransfer;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataRequestTransfer
-     */
     protected function addPaginationToDataRequest(
         Request $request,
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer,
@@ -148,11 +117,6 @@ class DataRequestBuilder implements DataRequestBuilderInterface
         return $guiTableDataRequestTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return int
-     */
     protected function getDefaultPageSize(GuiTableConfigurationTransfer $guiTableConfigurationTransfer): int
     {
         $guiTablePaginationConfigurationTransfer = $guiTableConfigurationTransfer->getPagination();

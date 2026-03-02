@@ -31,11 +31,6 @@ class GuiTableDataRequestExecutor implements GuiTableDataRequestExecutorInterfac
      */
     protected HttpResponseBuilderInterface $httpResponseBuilder;
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Http\DataRequest\DataRequestBuilderInterface $dataRequestBuilder
-     * @param \Spryker\Shared\GuiTable\Http\DataResponse\DataResponseFormatterInterface $dataResponseFormatter
-     * @param \Spryker\Shared\GuiTable\Http\HttpResponseBuilderInterface $httpResponseBuilder
-     */
     public function __construct(
         DataRequestBuilderInterface $dataRequestBuilder,
         DataResponseFormatterInterface $dataResponseFormatter,

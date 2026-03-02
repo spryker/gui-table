@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\GuiTableDataResponseTransfer;
 
 interface GuiTableDataProviderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     public function getData(GuiTableDataRequestTransfer $guiTableDataRequestTransfer): GuiTableDataResponseTransfer;
 }

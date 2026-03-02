@@ -1374,12 +1374,6 @@ class GuiTableConfigurationBuilder implements GuiTableConfigurationBuilderInterf
         return $guiTableEditableInitialDataTransfer->setErrors(new ArrayObject($guiTableEditableDataErrorTransfers));
     }
 
-    /**
-     * @param string $url
-     * @param string $method
-     *
-     * @return \Generated\Shared\Transfer\GuiTableEditableUrlTransfer
-     */
     protected function createEditableUrl(string $url, string $method): GuiTableEditableUrlTransfer
     {
         return (new GuiTableEditableUrlTransfer())
@@ -1488,11 +1482,6 @@ class GuiTableConfigurationBuilder implements GuiTableConfigurationBuilderInterf
         $this->editableConfiguration->addColumn($guiTableColumnConfigurationTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setFilters(GuiTableConfigurationTransfer $guiTableConfigurationTransfer): GuiTableConfigurationTransfer
     {
         $guiTableConfigurationTransfer->setFilters(
@@ -1508,11 +1497,6 @@ class GuiTableConfigurationBuilder implements GuiTableConfigurationBuilderInterf
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setRowActions(GuiTableConfigurationTransfer $guiTableConfigurationTransfer): GuiTableConfigurationTransfer
     {
         $guiTableConfigurationTransfer->setRowActions(
@@ -1531,11 +1515,6 @@ class GuiTableConfigurationBuilder implements GuiTableConfigurationBuilderInterf
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setBatchActions(GuiTableConfigurationTransfer $guiTableConfigurationTransfer): GuiTableConfigurationTransfer
     {
         $guiTableBatchActionsConfigurationTransfer = (new GuiTableBatchActionsConfigurationTransfer())
@@ -1555,11 +1534,6 @@ class GuiTableConfigurationBuilder implements GuiTableConfigurationBuilderInterf
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDataSource(GuiTableConfigurationTransfer $guiTableConfigurationTransfer): GuiTableConfigurationTransfer
     {
         $guiTableDataSourceConfigurationTransfer = new GuiTableDataSourceConfigurationTransfer();

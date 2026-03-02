@@ -17,19 +17,11 @@ class ConfigurationTranslator extends AbstractConfigurationTranslator
      */
     protected GuiTableToTranslatorFacadeInterface $translatorFacade;
 
-    /**
-     * @param \Spryker\Zed\GuiTable\Dependency\Facade\GuiTableToTranslatorFacadeInterface $translatorFacade
-     */
     public function __construct(GuiTableToTranslatorFacadeInterface $translatorFacade)
     {
         $this->translatorFacade = $translatorFacade;
     }
 
-    /**
-     * @param string $key
-     *
-     * @return string
-     */
     protected function translate(string $key): string
     {
         return $this->translatorFacade->trans($key);

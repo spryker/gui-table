@@ -26,19 +26,11 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
      */
     protected GuiTableConfigInterface $guiTableConfig;
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Configuration\GuiTableConfigInterface $guiTableConfig
-     */
     public function __construct(GuiTableConfigInterface $guiTableConfig)
     {
         $this->guiTableConfig = $guiTableConfig;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     public function setDefaultValues(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -55,11 +47,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultDataSource(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -74,11 +61,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultRowActions(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -95,11 +77,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultBatchActions(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -116,11 +93,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultPagination(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -141,11 +113,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultSearch(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -166,11 +133,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultFilters(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -187,11 +149,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultItemSelection(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -208,11 +165,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultSyncStateUrl(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {
@@ -229,11 +181,6 @@ class ConfigurationDefaultValuesExpander implements ConfigurationDefaultValuesEx
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     protected function setDefaultColumnConfigurator(
         GuiTableConfigurationTransfer $guiTableConfigurationTransfer
     ): GuiTableConfigurationTransfer {

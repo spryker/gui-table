@@ -108,9 +108,6 @@ class DataResponseFormatterTest extends Unit
         $globalContainer->setContainer(new Container(['SERVICE_TIMEZONE' => 'Europe/Berlin']));
     }
 
-    /**
-     * @return void
-     */
     public function testFormatGuiTableDataResponseReturnsArrayOfData(): void
     {
         // Arrange
@@ -137,9 +134,6 @@ class DataResponseFormatterTest extends Unit
         $this->assertEquals($expectedResult, $formattedGuiTableDataResponse);
     }
 
-    /**
-     * @return void
-     */
     public function testFormatGuiTableDataResponseFormatsDateTimeWhenTimezoneConfigNotSpecified(): void
     {
         // Arrange
@@ -164,9 +158,6 @@ class DataResponseFormatterTest extends Unit
         $this->assertSame(static::TEST_VALUE_DATE_FORMATTED_DEFAULT, $formattedGuiTableDataResponse[static::KEY_DATA_RESPONSE_ARRAY_DATA][1][static::TEST_COLUMN_ID_1]);
     }
 
-    /**
-     * @return void
-     */
     public function testFormatGuiTableDataResponseFormatsDateTimeWhenTimezoneConfigIsProvided(): void
     {
         // Arrange
@@ -191,9 +182,6 @@ class DataResponseFormatterTest extends Unit
         $this->assertSame(static::TEST_VALUE_DATE_FORMATTED_UTC, $formattedGuiTableDataResponse[static::KEY_DATA_RESPONSE_ARRAY_DATA][1][static::TEST_COLUMN_ID_1]);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     protected function createGuiTableDataResponseTransfer(): GuiTableDataResponseTransfer
     {
         $rows = array_map(

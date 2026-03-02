@@ -46,11 +46,6 @@ class GuiTableApplicationPlugin extends AbstractPlugin implements ApplicationPlu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Spryker\Service\Container\ContainerInterface
-     */
     protected function addGuiTableFactoryService(ContainerInterface $container): ContainerInterface
     {
         $container->set(static::SERVICE_GUI_TABLE_FACTORY, function (): GuiTableFactoryInterface {
@@ -60,11 +55,6 @@ class GuiTableApplicationPlugin extends AbstractPlugin implements ApplicationPlu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Spryker\Service\Container\ContainerInterface
-     */
     protected function addGuiTableHttpDataRequestExecutorService(ContainerInterface $container): ContainerInterface
     {
         $container->set(static::SERVICE_GUI_TABLE_HTTP_DATA_REQUEST_EXECUTOR, function (): GuiTableDataRequestExecutorInterface {
