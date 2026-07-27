@@ -268,7 +268,7 @@ class GuiTableConfigurationFunctionProvider extends TwigFunctionProvider
     /**
      * @param \Generated\Shared\Transfer\GuiTableConfigurationTransfer $guiTableConfigurationTransfer
      *
-     * @return array<int|string, false>
+     * @return array<string, mixed>
      */
     protected function prepareEditableData(GuiTableConfigurationTransfer $guiTableConfigurationTransfer): array
     {
